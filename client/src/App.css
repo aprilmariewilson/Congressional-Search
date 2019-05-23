@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  text-align: center; 
 }
 
 .App-logo {
@@ -10,17 +10,34 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  /* min-height: 50%; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding-bottom: 10px;
 }
-
+.myButton {
+  background-color: navy;
+  border: none;
+  color: white;
+  margin-top: 10px;
+  border-radius: 12px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
 .App-link {
   color: #61dafb;
+}
+.sadness {
+  margin-left: 20%;
+  margin-right: 10%;
+  align-content: center;
 }
 
 @keyframes App-logo-spin {
