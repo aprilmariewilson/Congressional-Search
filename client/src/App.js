@@ -32,7 +32,7 @@ class App extends Component {
         },
         options: [
           { key: 'NA', value: 'NA', displayValue: '' },
-          { key: 'AK', value: 'AK', displayValue: 'ALaska' },
+          { key: 'AK', value: 'AK', displayValue: 'Alaska' },
           { key: 'AL', value: 'AL', displayValue: 'Alabama' },
           { key: 'AZ', value: 'AZ', displayValue: 'Arizona' },
           { key: 'AR', value: 'AR', displayValue: 'Arkansas' },
@@ -143,7 +143,7 @@ class App extends Component {
   }
   // set state for data
   loadData = (res) => {
-this.setState({postData: res.data, name:'', party:'', state: '', district: '', phone: '', office: '', link: '' }).catch(err => console.log(err));
+    this.setState({ postData: res.data.results, name: '', party: '', state: '', district: '', phone: '', office: '', link: '' }).catch(err => console.log(err));
   };
   //form submit send out API calls to server.js
   formSubmitHandler = async e => {
@@ -163,7 +163,7 @@ this.setState({postData: res.data, name:'', party:'', state: '', district: '', p
         body: undefined,
       });
       const body = await response.text();
-      this.setState({postData:body})
+      this.setState({ postData: body })
 
 
     } else if (formData.branch === 'senate') {
@@ -175,9 +175,9 @@ this.setState({postData: res.data, name:'', party:'', state: '', district: '', p
         body: undefined,
       });
       const body = await response.text();
-      this.setState({ postData:body})
+      this.setState({ postData: body })
+    }
   }
-}
 
 
   render() {
@@ -205,7 +205,7 @@ this.setState({postData: res.data, name:'', party:'', state: '', district: '', p
             valid={this.state.formControls.area.valid}
           />
           <button type="submit"
-          className="myButton"
+            className="myButton"
             onClick={this.formSubmitHandler}
             disabled={!this.state.formControls.area.valid || !this.state.formControls.branch.valid}>Submit</button>
         </form>

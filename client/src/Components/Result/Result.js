@@ -4,9 +4,9 @@ import './Result';
 const Result = (props) => {
     return (
         <div className='person'>
-           <ul>
-          <li>her is one</li>
-           </ul>
+            <ul>
+                <li>here is one</li>
+            </ul>
         </div>
     )
 }
